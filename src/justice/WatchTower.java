@@ -1,6 +1,7 @@
 package justice;
 
 import java.util.PriorityQueue;
+import java.util.Comparator;
 
 
 public class WatchTower {
@@ -10,10 +11,10 @@ public class WatchTower {
      */
     PriorityQueue<Meteor> pq;
     public WatchTower(){
-        PriorityQueue<T> pq = new PriorityQueue<>(initialCapacity, new Comparator<Meteor> () {
+        this.pq = new PriorityQueue<>(10, new Comparator<Meteor> () {
 
             @Override
-            public int compare(T e1, T e2) {
+            public int compare(Meteor e1, Meteor e2) {
                 return e1.getDistance() - e2.getDistance();
             }
         });
