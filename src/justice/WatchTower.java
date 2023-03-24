@@ -26,6 +26,8 @@ public class WatchTower {
         } return false;
     }
 
-    public detectMeteor()
+    public void detectMeteor(Meteor m) {
+        this.pq.add(m);
+    }
 
 }
