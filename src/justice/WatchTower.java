@@ -4,7 +4,10 @@ import java.util.PriorityQueue;
 
 
 public class WatchTower {
-
+    /**
+     * WatchTower receives Meteors from Vandal Savage and adds them to the priority queue
+     * WatchTower can also destroy meteors taking the closest meteor from the queue.
+     */
     PriorityQueue<Meteor> pq;
     public WatchTower(){
         PriorityQueue<T> pq = new PriorityQueue<>(initialCapacity, new Comparator<Meteor> () {
@@ -22,4 +25,7 @@ public class WatchTower {
             return true;
         } return false;
     }
+
+    public detectMeteor()
+
 }
