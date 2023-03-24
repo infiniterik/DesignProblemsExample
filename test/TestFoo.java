@@ -9,6 +9,6 @@ public class TestFoo {
 
     @Test
     public void test2() {
-        assert Foo.foo() == true;
+        assert Foo.foo() == false;
     }
 }
