@@ -20,11 +20,8 @@ public class WatchTower {
         });
     }
 
-    public boolean destroy() {
-        Meteor toBeDestroyed = this.pq.poll();
-        if (toBeDestroyed != null) {
-            return true;
-        } return false;
+    public Meteor destroy() {
+        return this.pq.poll();
     }
 
     public void detectMeteor(Meteor m) {
