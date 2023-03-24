@@ -1,6 +1,6 @@
 package justice;
 
-public class Meteor implements Comparator<Meteor> {
+public class Meteor {
    int distance;
    public Meteor(int distance){
         this.distance = distance;
