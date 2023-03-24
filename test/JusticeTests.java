@@ -13,9 +13,9 @@ public class JusticeTests {
     public void addMeteor() {
         Meteor m = new Meteor(5000);
         WatchTower w = new WatchTower();
-        w.detect(m);
+        w.detectMeteor(m);
         Meteor destroyed = w.destroy();
-        assert destroyed.distance == m.distance;
+        assert destroyed.getDistance() == m.getDistance();
     }
 
 
