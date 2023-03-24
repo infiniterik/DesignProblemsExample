@@ -1,10 +1,12 @@
 package justice;
 
+import java.util.PriorityQueue;
 
 
 public class WatchTower {
-    
-    public WatchTower(){
 
+    PriorityQueue<Meteor> p;
+    public WatchTower(){
+        
     }
 }
