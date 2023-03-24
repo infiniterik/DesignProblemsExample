@@ -9,4 +9,6 @@ public class JusticeTests {
         WatchTower w = new WatchTower();
     }
 
+    
+
 }
