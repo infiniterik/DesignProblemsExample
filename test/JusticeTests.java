@@ -49,4 +49,36 @@ public class JusticeTests {
         }
     }
 
+    @Test
+    public void addRemoveAddRemove() {
+        // add multiple meteors to the watchtower
+        int[] distances = {100, 33, 9990, 21, 20000};
+        WatchTower w = new WatchTower();
+        for(int distance : distances) {
+            w.detectMeteor(new Meteor(distance));
+        }
+        assert w.destroy().getDistance() == 21;
+        assert w.destroy().getDistance() == 33;
+        int[] distances2 = {245, 12, 90, 1123, 3000};
+        for(int distance : distances2) {
+            w.detectMeteor(new Meteor(distance));
+        }
+        int[] distances3 = new int[distances.length + distances2.length - 2];
+        Arrays.sort(distances);
+        // I find Java to be quite verbose
+        // I'm sure there's a better way to do this
+        // but the tests don't have to be efficient, just thorough
+        for(int i = 2; i < distances.length; i++) {
+            distances3[i-2] = distances[i];
+        }
+        for(int i = 0; i < distances2.length; i++) {
+            distances3[distances.length-2 + i] = distances2[i];
+        }
+        Arrays.sort(distances3);
+        for(int distance : distances3) {
+            Meteor destroyed = w.destroy();
+            assert destroyed.getDistance() == distance;
+        }
+    }
+
 }
